@@ -643,7 +643,7 @@ function showStartGamePopup() {
   document.addEventListener('keydown', escapeHandler);
 }
 
-// Show Continue Popup - Saved games interface
+// Show Continue Popup - Enhanced with icon - Saved games interface
 function showContinuePopup() {
   const modal = document.createElement('div');
   modal.className = 'modal-overlay';
@@ -653,7 +653,7 @@ function showContinuePopup() {
       <div class="relative z-10">
         <div class="text-center mb-6">
           <div class="modal-icon-center">
-            <svg class="w-16 h-16 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke: white; fill: none;">
               <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
               <polyline points="17 21 17 13 7 13 7 21"></polyline>
               <polyline points="7 3 7 8 15 8"></polyline>
@@ -951,7 +951,7 @@ function showFullscreenPrompt() {
     padding: 1rem 2rem;
     border: 3px solid var(--foreground);
     font-family: Impact, sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
     z-index: 9999;
     cursor: pointer;
@@ -1130,14 +1130,14 @@ function initSimulateButton() {
         btn.addEventListener('click', closeModal);
       });
       
-      // Close modal on background click
+      // Close modal on background click AND STOP MUSIC
       modal.addEventListener('click', function(e) {
         if (e.target === modal) {
           closeModal();
         }
       });
       
-      // Close modal on ESC key
+      // Close modal on ESC key AND STOP MUSIC
       const escapeHandler = function(e) {
         if (e.key === 'Escape') {
           closeModal();
@@ -1575,3 +1575,4 @@ document.addEventListener('keydown', (event) => {
   </script>
 </body>
 </html>
+
