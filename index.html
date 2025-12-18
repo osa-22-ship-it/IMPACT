@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPACT</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Impact, 'Arial Black', sans-serif;
+      background: #FFFFFF;
+      color: #1F2937;
+      overflow: hidden;
+    }
+
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      z-index: 9999;
+      transition: opacity 0.8s ease-out;
+    }
+
+    .loader-container.fade-out {
+      opacity: 0;
+    }
+
+    .impact-title {
+      font-size: 20.5rem;
+      font-weight: 900;
+      color: #1F2937;
+      letter-spacing: -0.025em;
+      margin-bottom: 3rem;
+      user-select: none;
+    }
+
+    .impact-title .highlight {
+      color: #DC2626;
+    }
+
+    .loading-bar-container {
+      width: 500px;
+      height: 12px;
+      background: #E5E7EB;
+      border-radius: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loading-bar {
+      height: 100%;
+      width: 0%;
+      background: #DC2626;
+      border-radius: 100px;
+      transition: width 2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    .click-prompt {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* Custom Cursor */
+    html, body, * {
+      cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\
+<polygon points='2,2 30,16 18,19 15,30' fill='%23ff2020' stroke='%23000000' stroke-width='2'/>\
+</svg>") 6 4, auto !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .impact-title {
+        font-size: 6rem;
+      }
+      .loading-bar-container {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container" id="loaderContainer">
+    <div class="impact-title">
+      IM<span class="highlight">PACT</span>
+    </div>
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loadingBar"></div>
+    </div>
+    <div class="click-prompt">Click to load</div>
+  </div>
+
+  <script>
+    const loaderContainer = document.getElementById('loaderContainer');
+    const loadingBar = document.getElementById('loadingBar');
+    let isLoading = false;
+
+    loaderContainer.addEventListener('click', function() {
+      if (!isLoading) {
+        isLoading = true;
+        
+        // Fill the loading bar
+        loadingBar.style.width = '100%';
+        
+        // After loading completes, fade out and redirect
+        setTimeout(() => {
+          loaderContainer.classList.add('fade-out');
+          
+          // Redirect to pg1.html after fade out
+          setTimeout(() => {
+            window.location.href = 'pg1.html';
+          }, 800);
+        }, 2000);
+      }
+    });
+  </script>
+</body>
+</html>
