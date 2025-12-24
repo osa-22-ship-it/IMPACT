@@ -636,6 +636,7 @@ nav {
 .nav-link.active {
   background-color: var(--primary);
   color: var(--primary-foreground);
+  border-radius: 0.5rem;
 }
 
 /* Sticky Navigation */
