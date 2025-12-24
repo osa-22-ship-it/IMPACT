@@ -533,6 +533,7 @@ body {
 /* Stat Card Hover Effects */
 .stat-card {
   transition: background-color 0.3s;
+  border-radius: 0.5rem; /* Add this line */
 }
 
 .stat-card:hover {
