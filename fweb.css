@@ -779,18 +779,9 @@ html, body, * {
   background-color: var(--primary);
   border: 4px solid var(--foreground);
   padding: 3rem;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  min-width: 300px;
-  text-align: center;
-  animation: scaleIn 0.3s ease-in-out;
-  clip-path: polygon(
-    0 12px, 12px 12px, 12px 0,
-    calc(100% - 12px) 0, calc(100% - 12px) 12px, 100% 12px,
-    100% calc(100% - 12px), calc(100% - 12px) calc(100% - 12px), calc(100% - 12px) 100%,
-    12px 100%, 12px calc(100% - 12px), 0 calc(100% - 12px)
-  );
+  border-radius: 0.5rem; /* Change from 0.5rem to 1rem for more rounding if desired */
+  /* ... rest of properties ... */
+  /* REMOVE the clip-path line */
 }
 
 @keyframes scaleIn {
