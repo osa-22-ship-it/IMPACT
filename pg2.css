@@ -784,14 +784,8 @@ cursor: url("data:image/svg+xml;utf8,\
 .button-section .btn-start-game,
 .button-section .btn-continue {
   width: 100%;
-  border: none;
+  border radius: 0.5rem;
   font-family: Impact, 'Arial Black', sans-serif;
-  clip-path: polygon(
-    0 8px, 8px 8px, 8px 0,
-    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
-    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
-    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
-  );
 }
 
 .button-section .button-row {
