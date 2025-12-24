@@ -763,6 +763,8 @@ nav {
   position: relative;
   pointer-events: auto;
   font-family: Impact, 'Arial Black', sans-serif;
+  border-radius: 0.75rem; /* Add this */
+  overflow: hidden; /* Add this to keep content within rounded corners */
 }
 
 .slot {
@@ -967,6 +969,8 @@ cursor: url("data:image/svg+xml;utf8,\
   position: relative;
   pointer-events: auto;
   font-family: Impact, 'Arial Black', sans-serif;
+  border-radius: 0.75rem; /* Add this */
+  overflow: hidden; /* Add this */
 }
 
 @keyframes slideIn {
