@@ -779,9 +779,16 @@ html, body, * {
   background-color: var(--primary);
   border: 4px solid var(--foreground);
   padding: 3rem;
-  border-radius: 0.5rem; /* Change from 0.5rem to 1rem for more rounding if desired */
-  /* ... rest of properties ... */
-  /* REMOVE the clip-path line */
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  min-width: 300px;
+  text-align: center;
+  animation: scaleIn 0.3s ease-in-out;
+  display: flex;              /* Add this */
+  flex-direction: column;     /* Add this */
+  align-items: center;        /* Add this */
+  justify-content: center;    /* Add this */
 }
 
 @keyframes scaleIn {
