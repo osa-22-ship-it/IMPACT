@@ -636,12 +636,6 @@ nav {
 .nav-link.active {
   background-color: var(--primary);
   color: var(--primary-foreground);
-  clip-path: polygon(
-    0 4px, 4px 4px, 4px 0,
-    calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
-    100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
-    4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
-  );
 }
 
 /* Sticky Navigation */
